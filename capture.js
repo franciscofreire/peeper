@@ -1,8 +1,9 @@
 var page = require('webpage').create(),
+  system = require('system'),
   url, filename, size;
 
-url = phantom.args[0];
-filename = phantom.args[1];
+url = system.args[1];
+filename = system.args[2];
 page.viewportSize = { width: 1024, height: 768 };
 page.clipRect = { top: 0, left: 0, width: 1024, height: 768 };
 

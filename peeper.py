@@ -71,7 +71,7 @@ urls.sort()
 for url in urls:
   name = re.sub("http(s)?://", "", url)
   name = re.sub(":", "-", name)
-  capture = "./phantomjs --ignore-ssl-errors=yes ./capture.js %s %s/%s.png" % (url, dir, name)
+  capture = "phantomjs --ignore-ssl-errors=yes ./capture.js %s %s/%s.png" % (url, dir, name)
   #process = subprocess.Popen([capture], shell=True)
   run = os.system
   #os.system is blocking, creating serial execution
